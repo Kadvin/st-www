@@ -26,6 +26,17 @@ a:hover {
     text-decoration: none;
 }
 
+@media (min-width: 1920px) {
+    .container {
+        width: 1440px;
+    }
+}
+
+p.highlight{
+    margin-top: 16px;
+    font-weight: bold;
+}
+
 input[type="button"],
 input[type="submit"] {
     transition: 0.5s all;
@@ -239,6 +250,14 @@ span.desc {
 .carousel-caption a:hover {
     background: #ee4f4f;
     border: 1px solid #ee4f4f;
+}
+
+ul.questions li {
+    letter-spacing: 1px;
+    font-size: 1em;
+    line-height: 1.9em;
+    color: #777;
+    list-style-type: none;
 }
 
 .codes {
