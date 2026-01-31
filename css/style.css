@@ -546,6 +546,11 @@ ul.short li a {
     text-decoration: none;
 }
 
+ul.portfolio-area {
+    display: flex;
+    align-items: center;
+}
+
 .services-breadcrumb ul li span {
     padding: 0 1.5em;
 }
