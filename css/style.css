@@ -567,7 +567,7 @@ h3.tittle-w3ls {
     text-align: center;
 }
 
-p.copy-right a {
+p.copy-right a, a:hover, a:visited {
     color: #848484;
 }
 
@@ -1516,10 +1516,6 @@ p.copy-right {
     font-size: 14px;
     border-top: 1px solid #0e0e0e;
     padding-top: 3em;
-}
-
-p.copy-right a {
-    color: #76daff;
     text-decoration: none;
 }
 
