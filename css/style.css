@@ -567,6 +567,10 @@ h3.tittle-w3ls {
     text-align: center;
 }
 
+p.copy-right a {
+    color: #d9edf7;
+}
+
 h3.tittle-w3ls.cen {
     color: #fff;
     text-align: center;
