@@ -540,6 +540,9 @@ body.platform .banner_inner_con {
 body.service .banner_inner_con {
     background: url(../images/banner5.jpg);
 }
+body.contact .banner_inner_con {
+    background: url(../images/banner2.jpg);
+}
 .services-breadcrumb {
     padding: 1em 1em;
     background: #f5f5f5;
