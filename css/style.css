@@ -583,7 +583,7 @@ h3.tittle-w3ls {
     text-align: center;
 }
 
-p.copy-right a, a:hover, a:visited {
+p.copy-right a, p.copy-right a:hover, p.copy-right a:visited {
     color: #848484;
 }
 
