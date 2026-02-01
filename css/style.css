@@ -519,14 +519,25 @@ p.sub_p {
 }
 
 .banner_inner_con {
-    background: url(../images/banner2.jpg) no-repeat 0px 0px;
+    background: url(../images/banner1.jpg) no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
     min-height: 300px;
 }
-
+.banner_inner_con &.about {
+    background: url(../images/banner2.jpg) no-repeat 0px 0px;
+}
+.banner_inner_con &.portfolio {
+    background: url(../images/banner3.jpg) no-repeat 0px 0px;
+}
+.banner_inner_con &.platform {
+    background: url(../images/banner4.jpg) no-repeat 0px 0px;
+}
+.banner_inner_con &.service {
+    background: url(../images/banner5.jpg) no-repeat 0px 0px;
+}
 .services-breadcrumb {
     padding: 1em 1em;
     background: #f5f5f5;
