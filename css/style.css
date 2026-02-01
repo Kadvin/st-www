@@ -519,24 +519,26 @@ p.sub_p {
 }
 
 .banner_inner_con {
-    background: url(../images/banner1.jpg) no-repeat 0 0;
+    background: url(../images/banner1.jpg) ;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
     min-height: 300px;
+    background-position-x: center;
+    background-repeat: repeat-x;
 }
 body.about .banner_inner_con {
-    background: url(../images/banner2.jpg) no-repeat 0 0;
+    background: url(../images/banner2.jpg);
 }
 body.portfolio .banner_inner_con {
-    background: url(../images/banner3.jpg) no-repeat 0 0;
+    background: url(../images/banner3.jpg);
 }
 body.platform .banner_inner_con {
-    background: url(../images/banner4.jpg) no-repeat 0 0;
+    background: url(../images/banner4.jpg);
 }
 body.service .banner_inner_con {
-    background: url(../images/banner5.jpg) no-repeat 0 0;
+    background: url(../images/banner5.jpg);
 }
 .services-breadcrumb {
     padding: 1em 1em;
