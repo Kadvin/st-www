@@ -587,6 +587,10 @@ p.copy-right a, p.copy-right a:hover, p.copy-right a:visited {
     color: #848484;
 }
 
+body.portfolio .port-info h5 {
+    height: 48px;
+}
+
 h3.tittle-w3ls.cen {
     color: #fff;
     text-align: center;
