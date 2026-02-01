@@ -629,34 +629,16 @@
 <!-- js -->
 <!-- Smooth-Scrolling-JavaScript -->
 <script type="text/javascript" src="js/easing.js"></script>
-<!--<script type="text/javascript" src="js/move-top.html"></script>-->
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
         $(".scroll, .navbar li a, .footer li a").click(function (event) {
             $('html,body').animate({
-                scrollTop: $(this.hash).offset().top
+                scrollTop: $(this).offset().top
             }, 1000);
         });
     });
 </script>
-<!-- //Smooth-Scrolling-JavaScript
-<script type="text/javascript">
-    $(document).ready(function () {
-    /*
-        var defaults = {
-            containerID: 'toTop', // fading element id
-            containerHoverID: 'toTopHover', // fading element hover id
-            scrollSpeed: 1200,
-            easingType: 'linear'
-        };
-
-        $().UItoTop({
-            easingType: 'easeOutQuart'
-        });
-       */
-    });
-</script>
- -->
+<!-- //Smooth-Scrolling-JavaScript -->
 <a href="#home" class="scroll" id="toTop" style="display: block;">
     <span id="toTopHover" style="opacity: 1;"> </span>
 </a>
