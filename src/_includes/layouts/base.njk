@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+{% include "partials/head.njk" %}
+
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
+{% include "partials/header.njk" %}
+
+{{ content | safe }}
+
+{% include "partials/footer.njk" %}
+{% include "partials/scripts.njk" %}
+</body>
+</html>

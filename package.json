@@ -1,0 +1,17 @@
+{
+  "name": "st-www",
+  "version": "1.0.0",
+  "description": "宏澳软件企业官网",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "deploy": "npm run build && cp -r dist/* ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
