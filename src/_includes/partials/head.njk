@@ -1,24 +1,22 @@
 <head>
-    <title>{{ title | default("宏澳软件") }}</title>
+    <title>{{ title | default("Hive — 高质量软件开发的管理操作系统") }}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="keywords" content="宏澳,订货宝,奶粉,母婴,日化,百货,渠道,经销商,品牌厂家,优惠政策,闪购,即时零售"/>
-    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="description" content="{{ description | default('Hive 让 AI Agent 团队像训练有素的研发组织一样工作。1 人 + 20 个 AI，产能提升 5-10 倍。') }}"/>
+    <meta name="keywords" content="Hive,AI研发,Agent管理,软件开发,流程引擎,AI团队,研发效能,DevOps"/>
 
-    <script type="application/x-javascript">
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
+    <!-- Open Graph / 微信分享 -->
+    <meta property="og:title" content="{{ title | default('Hive — 高质量软件开发的管理操作系统') }}"/>
+    <meta property="og:description" content="{{ ogDescription | default('让同样的研发团队，产出增加 5-10 倍。AI 执行，人类决策。') }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="/images/og-cover.jpg"/>
 
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
+    <link rel="shortcut icon" href="/images/favicon.png">
 
     <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/css/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="/css/prettyPhoto.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/hive.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="/css/font-awesome.css" rel="stylesheet">
 
     {% if extraCSS %}

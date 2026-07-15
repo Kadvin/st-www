@@ -1,11 +1,9 @@
 <div class="top_header" id="home">
-    <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="nav_top_fx_w3ls_agileinfo">
+        <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false"
-                        aria-controls="navbar">
+                        aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">切换导航</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -13,27 +11,24 @@
                 </button>
                 <div class="logo-w3layouts-agileits">
                     <h1><a class="navbar-brand" href="/">
-                        <i class="fa fa-users" aria-hidden="true" style="margin-right: 8px"></i>
-                        宏澳软件
-                        <span class="desc">重塑交易结构，倍增市场份额</span></a></h1>
+                        <span class="hive-logo-icon">⬡</span>
+                        Hive
+                        <span class="desc">高质量软件开发的管理操作系统</span></a></h1>
                 </div>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <div class="nav_right_top">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="request" href="/signup/">开通试用</a></li>
+                        <li><a class="btn-trial" href="/signup/">申请试用</a></li>
                     </ul>
                     <ul class="nav navbar-nav">
                         <li {% if currentPage == 'home' %}class="active"{% endif %}><a href="/">首页</a></li>
-                        <li {% if currentPage == 'about' %}class="active"{% endif %}><a href="/about/">关于宏澳</a></li>
-                        <li {% if currentPage == 'portfolio' %}class="active"{% endif %}><a href="/portfolio/">客户案例</a></li>
-                        <li {% if currentPage == 'platform' %}class="active"{% endif %}><a href="/platform/">产品介绍</a></li>
-                        <li {% if currentPage == 'service' %}class="active"{% endif %}><a href="/service/">服务说明</a></li>
+                        <li {% if currentPage == 'product' %}class="active"{% endif %}><a href="/product/">产品能力</a></li>
+                        <li {% if currentPage == 'philosophy' %}class="active"{% endif %}><a href="/philosophy/">研发理念</a></li>
                         <li {% if currentPage == 'contact' %}class="active"{% endif %}><a href="/contact/">联系我们</a></li>
                     </ul>
                 </div>
             </div>
-            <!--/.nav-collapse -->
         </div>
     </nav>
 </div>

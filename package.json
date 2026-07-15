@@ -1,14 +1,14 @@
 {
-  "name": "st-www",
+  "name": "hive-www",
   "version": "1.0.0",
-  "description": "宏澳软件企业官网",
+  "description": "Hive 产品官网 - 高质量软件开发的管理操作系统",
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy",
     "start": "eleventy --serve",
     "deploy": "npm run build && cp -r dist/* ."
   },
-  "keywords": [],
+  "keywords": ["hive", "ai", "software-development", "agent", "management"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
