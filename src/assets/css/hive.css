@@ -1,0 +1,188 @@
+/* ============================================
+   Hive 品牌覆盖样式
+   基于 Play Bootstrap 模板定制
+   ============================================ */
+
+/* === 品牌 Logo === */
+.hive-logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.ud-header.sticky .hive-logo {
+    color: #1a237e;
+}
+
+.ud-footer-logo .hive-logo {
+    color: #fff;
+    font-size: 22px;
+}
+
+/* === Hero 视频/截图占位 === */
+.hive-hero-screenshot {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.screenshot-placeholder-dark {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    aspect-ratio: 16/9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.screenshot-placeholder-dark i {
+    font-size: 56px;
+    margin-bottom: 12px;
+}
+
+.screenshot-placeholder-dark p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* === About Section: 数据卡片 === */
+.hive-about-visual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.proof-card {
+    background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+    border-radius: 12px;
+    padding: 28px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.proof-card .proof-number {
+    font-size: 36px;
+    font-weight: 800;
+    color: #f59e0b;
+    line-height: 1.2;
+}
+
+.proof-card .proof-label {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 6px;
+}
+
+/* === 品牌色覆盖 === */
+:root {
+    --ud-primary: #1a237e;
+}
+
+.ud-hero {
+    background: linear-gradient(135deg, #1a237e 0%, #0d47a1 50%, #1565c0 100%);
+}
+
+.ud-main-btn {
+    background: #1a237e;
+    border-color: #1a237e;
+}
+
+.ud-main-btn:hover {
+    background: #283593;
+    border-color: #283593;
+}
+
+.ud-main-btn.ud-white-btn {
+    background: #fff;
+    color: #1a237e;
+    border-color: #fff;
+}
+
+.ud-main-btn.ud-white-btn:hover {
+    background: #f59e0b;
+    color: #fff;
+    border-color: #f59e0b;
+}
+
+.ud-main-btn.ud-border-btn {
+    background: transparent;
+    color: #1a237e;
+    border-color: #1a237e;
+}
+
+.ud-main-btn.ud-border-btn:hover {
+    background: #1a237e;
+    color: #fff;
+}
+
+.ud-feature-icon i {
+    color: #1a237e;
+}
+
+.ud-single-pricing.active {
+    background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+}
+
+.ud-popular-tag {
+    background: #f59e0b;
+}
+
+.ud-section-title span {
+    color: #1a237e;
+}
+
+/* === Footer 品牌色 === */
+.ud-footer {
+    background: #0f172a;
+}
+
+/* === FAQ 样式修正 === */
+.ud-faq-btn span:last-child {
+    text-align: left;
+}
+
+/* === 联系表单 === */
+.ud-contact-form input,
+.ud-contact-form textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 6px;
+    transition: border-color 0.2s;
+}
+
+.ud-contact-form input:focus,
+.ud-contact-form textarea:focus {
+    outline: none;
+    border-color: #1a237e;
+}
+
+.ud-form-group {
+    margin-bottom: 20px;
+}
+
+.ud-form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #334155;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .hive-about-visual {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .proof-card .proof-number {
+        font-size: 28px;
+    }
+}

@@ -1,190 +1,481 @@
 ---
 layout: layouts/base.njk
-title: Hive — 高质量软件开发的管理操作系统
-currentPage: home
+title: Hive（蜂巢）— 高质量软件开发的管理操作系统
 ---
 
-<!-- Hero Section -->
-<section class="hive-hero">
+<!-- ====== Hero Start ====== -->
+<section class="ud-hero" id="home">
     <div class="container">
-        <div class="hero-content text-center">
-            <h2 class="hero-title">让 AI 团队交付<span class="highlight">生产级软件</span></h2>
-            <p class="hero-subtitle">
-                同样的研发团队，产能提升 5-10 倍。<br>
-                研发人员从编码者升级为管理者，把经验和判断力花在刀刃上。
-            </p>
-            <div class="hero-cta">
-                <a href="/signup/" class="btn btn-primary btn-lg btn-cta">申请试用</a>
-                <a href="/product/" class="btn btn-outline btn-lg btn-cta-secondary">了解产品能力</a>
-            </div>
-        </div>
-        <!-- 产品截图/视频占位 -->
-        <div class="hero-media">
-            <div class="hero-video-placeholder">
-                <div class="placeholder-content">
-                    <i class="fa fa-play-circle"></i>
-                    <p>全景图实时演示视频</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 一句话定位 -->
-<section class="hive-positioning">
-    <div class="container text-center">
-        <p class="positioning-text">
-            <strong>Hive 是高质量软件开发的管理操作系统。</strong><br>
-            它让 AI Agent 团队像训练有素的研发组织一样工作——<br>
-            有流程、有质量门禁、有异常检测、有自动恢复，产出的是可交付的生产级软件。
-        </p>
-    </div>
-</section>
-
-<!-- 价值对比 -->
-<section class="hive-value">
-    <div class="container">
-        <h3 class="section-title text-center">同样的团队，产出翻倍</h3>
-        <p class="section-desc text-center">Hive 不是来替代研发人员，而是把他们从日常编码中解放出来，<br>让每个人都能带领一个 AI 团队交付业务价值。</p>
-
-        <div class="row value-grid">
-            <div class="col-md-4 value-item">
-                <div class="value-icon"><i class="fa fa-rocket"></i></div>
-                <h4>产能 ×5-10</h4>
-                <p>1 人管理 20+ AI Agent，产出等效 5-8 人传统团队，7×24 不间断运转</p>
-            </div>
-            <div class="col-md-4 value-item">
-                <div class="value-icon"><i class="fa fa-shield"></i></div>
-                <h4>质量有保障</h4>
-                <p>流程引擎强制 Gate 审批，AI 每一行产出可查看 diff，跳不过、糊弄不了</p>
-            </div>
-            <div class="col-md-4 value-item">
-                <div class="value-icon"><i class="fa fa-eye"></i></div>
-                <h4>全局可见</h4>
-                <p>全景图一屏掌控：所有工单在哪个节点、哪个 AI 在干、有没有卡住，异常自动浮现</p>
-            </div>
-        </div>
-        <div class="row value-grid">
-            <div class="col-md-4 value-item">
-                <div class="value-icon"><i class="fa fa-heartbeat"></i></div>
-                <h4>自动恢复</h4>
-                <p>AI 卡住/崩溃/模型限流——系统自动检测、自动恢复，7×24 无人值守也能自愈</p>
-            </div>
-            <div class="col-md-4 value-item">
-                <div class="value-icon"><i class="fa fa-lock"></i></div>
-                <h4>数据安全</h4>
-                <p>源码始终在客户自有主机，Hive 只传控制指令，核心知识产权完全可控</p>
-            </div>
-            <div class="col-md-4 value-item">
-                <div class="value-icon"><i class="fa fa-globe"></i></div>
-                <h4>顶级模型</h4>
-                <p>内置代理集群，国内企业可靠使用 Claude Code、GPT-5、GLM-5.2 等国内外顶级模型</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 角色升级 -->
-<section class="hive-role-upgrade">
-    <div class="container">
-        <h3 class="section-title text-center">研发人员的角色升级</h3>
         <div class="row">
-            <div class="col-md-6">
-                <div class="upgrade-card before">
-                    <h4><i class="fa fa-times-circle"></i> 以前</h4>
-                    <ul>
-                        <li>写 CRUD、调接口、跑测试</li>
-                        <li>盯终端等编译、手动部署</li>
-                        <li>重复性工作占据 80% 时间</li>
-                        <li>经验和判断力被日常琐事淹没</li>
+            <div class="col-lg-12">
+                <div class="ud-hero-content wow fadeInUp" data-wow-delay=".2s">
+                    <h1 class="ud-hero-title">
+                        让 AI 团队交付<br>生产级软件
+                    </h1>
+                    <p class="ud-hero-desc">
+                        Hive（蜂巢）是高质量软件开发的管理操作系统。<br>
+                        同样的研发团队，产能提升 5-10 倍。研发人员从编码者升级为管理者。
+                    </p>
+                    <ul class="ud-hero-buttons">
+                        <li>
+                            <a href="/signup/" class="ud-main-btn ud-white-btn">
+                                申请试用
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#features" class="ud-main-btn ud-link-btn">
+                                了解更多 <i class="lni lni-arrow-right"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="upgrade-card after">
-                    <h4><i class="fa fa-check-circle"></i> 用 Hive 之后</h4>
-                    <ul>
-                        <li>定方案、审架构、做技术决策</li>
-                        <li>一屏看全局、审批验收、把关质量</li>
-                        <li>带领 AI 团队交付业务价值</li>
-                        <li>经验和判断力发挥最大价值</li>
-                    </ul>
+
+                <div class="ud-hero-image wow fadeInUp" data-wow-delay=".25s">
+                    <div class="hive-hero-screenshot">
+                        <div class="screenshot-placeholder-dark">
+                            <i class="lni lni-play"></i>
+                            <p>Hive 全景图实时演示</p>
+                        </div>
+                    </div>
+                    <img src="/assets/images/hero/dotted-shape.svg" alt="shape" class="shape shape-1"/>
+                    <img src="/assets/images/hero/dotted-shape.svg" alt="shape" class="shape shape-2"/>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!-- ====== Hero End ====== -->
 
-<!-- 产品截图展示区 -->
-<section class="hive-screenshots">
+<!-- ====== Features Start ====== -->
+<section id="features" class="ud-features">
     <div class="container">
-        <h3 class="section-title text-center">产品实拍</h3>
-        <p class="section-desc text-center">以下为 Hive 生产环境实际运行截图</p>
-
-        <div class="screenshot-grid">
-            <div class="screenshot-item">
-                <div class="screenshot-placeholder">
-                    <p>📊 全景图 — 流水线看板</p>
-                    <span>所有工单在流程中的实时位置</span>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ud-section-title">
+                    <span>核心能力</span>
+                    <h2>Hive 为你的研发团队带来什么</h2>
+                    <p>
+                        不是替代研发人员，而是让每个人都能带领一个 AI 团队交付业务价值。
+                    </p>
                 </div>
             </div>
-            <div class="screenshot-item">
-                <div class="screenshot-placeholder">
-                    <p>💬 AI 对话 — 直接与 AI 交流</p>
-                    <span>Web 内与任意 AI 实例实时对话</span>
+        </div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-sm-6">
+                <div class="ud-single-feature wow fadeInUp" data-wow-delay=".1s">
+                    <div class="ud-feature-icon">
+                        <i class="lni lni-rocket"></i>
+                    </div>
+                    <div class="ud-feature-content">
+                        <h3 class="ud-feature-title">产能 ×5-10</h3>
+                        <p class="ud-feature-desc">
+                            1 人管理 20+ AI Agent，产出等效 5-8 人传统团队，7×24 不间断运转。
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="screenshot-item">
-                <div class="screenshot-placeholder">
-                    <p>✅ 审批 — 逐行查看 diff</p>
-                    <span>每一行产出都可审查</span>
+            <div class="col-xl-3 col-lg-3 col-sm-6">
+                <div class="ud-single-feature wow fadeInUp" data-wow-delay=".15s">
+                    <div class="ud-feature-icon">
+                        <i class="lni lni-shield"></i>
+                    </div>
+                    <div class="ud-feature-content">
+                        <h3 class="ud-feature-title">质量有保障</h3>
+                        <p class="ud-feature-desc">
+                            流程引擎强制 Gate 审批，AI 每行产出可查看 diff，跳不过、糊弄不了。
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="screenshot-item">
-                <div class="screenshot-placeholder">
-                    <p>🗺️ 拓扑图 — 基础设施全览</p>
-                    <span>CMDB 可视化编辑器</span>
+            <div class="col-xl-3 col-lg-3 col-sm-6">
+                <div class="ud-single-feature wow fadeInUp" data-wow-delay=".2s">
+                    <div class="ud-feature-icon">
+                        <i class="lni lni-eye"></i>
+                    </div>
+                    <div class="ud-feature-content">
+                        <h3 class="ud-feature-title">全局可见</h3>
+                        <p class="ud-feature-desc">
+                            全景图一屏掌控全局——工单位置、AI 状态、异常告警，一目了然。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-sm-6">
+                <div class="ud-single-feature wow fadeInUp" data-wow-delay=".25s">
+                    <div class="ud-feature-icon">
+                        <i class="lni lni-pulse"></i>
+                    </div>
+                    <div class="ud-feature-content">
+                        <h3 class="ud-feature-title">自动恢复</h3>
+                        <p class="ud-feature-desc">
+                            AI 卡住/崩溃/限流？系统自动检测→恢复→升级，7×24 自愈。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-xl-3 col-lg-3 col-sm-6">
+                <div class="ud-single-feature wow fadeInUp" data-wow-delay=".1s">
+                    <div class="ud-feature-icon">
+                        <i class="lni lni-lock"></i>
+                    </div>
+                    <div class="ud-feature-content">
+                        <h3 class="ud-feature-title">数据安全</h3>
+                        <p class="ud-feature-desc">
+                            源码始终在客户自有主机，Hive 只传控制指令，知识产权完全可控。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-sm-6">
+                <div class="ud-single-feature wow fadeInUp" data-wow-delay=".15s">
+                    <div class="ud-feature-icon">
+                        <i class="lni lni-world"></i>
+                    </div>
+                    <div class="ud-feature-content">
+                        <h3 class="ud-feature-title">顶级模型</h3>
+                        <p class="ud-feature-desc">
+                            内置代理集群，国内可靠使用 Claude Code、GPT-5、GLM-5.2 等。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-sm-6">
+                <div class="ud-single-feature wow fadeInUp" data-wow-delay=".2s">
+                    <div class="ud-feature-icon">
+                        <i class="lni lni-cog"></i>
+                    </div>
+                    <div class="ud-feature-content">
+                        <h3 class="ud-feature-title">规则引擎</h3>
+                        <p class="ud-feature-desc">
+                            流程不是硬编码，规则可配置、可演进、支持 DAG 子流程编排。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-sm-6">
+                <div class="ud-single-feature wow fadeInUp" data-wow-delay=".25s">
+                    <div class="ud-feature-icon">
+                        <i class="lni lni-users"></i>
+                    </div>
+                    <div class="ud-feature-content">
+                        <h3 class="ud-feature-title">角色升级</h3>
+                        <p class="ud-feature-desc">
+                            研发人员从"写代码"升级为"管团队"，发挥经验和判断力的最大价值。
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!-- ====== Features End ====== -->
 
-<!-- 实证数据 -->
-<section class="hive-proof">
-    <div class="container text-center">
-        <h3 class="section-title">Dogfooding 实证：Hive 用自己开发自己</h3>
-        <p class="section-desc">以下数据来自 Hive 实际生产运行</p>
-        <div class="row proof-numbers">
-            <div class="col-sm-3 proof-item">
-                <div class="proof-number">420+</div>
-                <div class="proof-label">工单完成闭环</div>
+<!-- ====== About Start ====== -->
+<section id="about" class="ud-about">
+    <div class="container">
+        <div class="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
+            <div class="ud-about-content-wrapper">
+                <div class="ud-about-content">
+                    <span class="tag">为什么选 Hive</span>
+                    <h2>AI 编码工具解决"写代码"，<br>Hive 解决"管研发"</h2>
+                    <p>
+                        Copilot / Cursor / Devin 让 AI 写代码更快。但当你用多个 AI Agent 组成团队完成完整研发流程时——谁来协调协作？谁来保证质量？谁来发现和恢复故障？
+                    </p>
+                    <p>
+                        <strong>Hive 是管理这些 AI 工具的平台。</strong>它让 20 个 AI Agent 有序运转：有需求分析、有设计评审、有开发协作、有测试验收、有部署流程、有故障恢复。
+                    </p>
+                    <a href="/signup/" class="ud-main-btn">申请试用</a>
+                </div>
             </div>
-            <div class="col-sm-3 proof-item">
-                <div class="proof-number">100+</div>
-                <div class="proof-label">API 端点</div>
-            </div>
-            <div class="col-sm-3 proof-item">
-                <div class="proof-number">20+</div>
-                <div class="proof-label">Web 页面</div>
-            </div>
-            <div class="col-sm-3 proof-item">
-                <div class="proof-number">7×24</div>
-                <div class="proof-label">不间断运行</div>
+            <div class="ud-about-image">
+                <div class="hive-about-visual">
+                    <div class="proof-card">
+                        <div class="proof-number">420+</div>
+                        <div class="proof-label">工单完成闭环</div>
+                    </div>
+                    <div class="proof-card">
+                        <div class="proof-number">100+</div>
+                        <div class="proof-label">API 端点</div>
+                    </div>
+                    <div class="proof-card">
+                        <div class="proof-number">20+</div>
+                        <div class="proof-label">AI 实例管理</div>
+                    </div>
+                    <div class="proof-card">
+                        <div class="proof-number">7×24</div>
+                        <div class="proof-label">不间断运行</div>
+                    </div>
+                </div>
             </div>
         </div>
-        <p class="proof-footnote">全部由 AI 团队执行产出，人类只做方向决策和关键审批。</p>
     </div>
 </section>
+<!-- ====== About End ====== -->
 
-<!-- CTA -->
-<section class="hive-cta">
-    <div class="container text-center">
-        <h3>让你的研发团队产能翻倍</h3>
-        <p>无需改变现有人员结构，Hive 让每个研发人员都能带领 AI 团队交付更大的价值。</p>
-        <div class="cta-buttons">
-            <a href="/signup/" class="btn btn-primary btn-lg btn-cta">申请试用</a>
-            <a href="/contact/" class="btn btn-outline btn-lg btn-cta-secondary">商务咨询</a>
+<!-- ====== Pricing Start ====== -->
+<section id="pricing" class="ud-pricing">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ud-section-title mx-auto text-center">
+                    <span>商业模式</span>
+                    <h2>灵活的部署方式</h2>
+                    <p>
+                        无论企业规模大小，Hive 都能适配你的场景。核心按 AI 实例数计费。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-0 align-items-center justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-10">
+                <div class="ud-single-pricing first-item wow fadeInUp" data-wow-delay=".15s">
+                    <div class="ud-pricing-header">
+                        <h3>基础版</h3>
+                        <h4>按需报价</h4>
+                    </div>
+                    <div class="ud-pricing-body">
+                        <ul>
+                            <li>全景视图</li>
+                            <li>工单管理 + 流转</li>
+                            <li>Gate 审批</li>
+                            <li>AI 健康检测</li>
+                            <li>≤ 10 AI 实例</li>
+                            <li>单团队</li>
+                        </ul>
+                    </div>
+                    <div class="ud-pricing-footer">
+                        <a href="/signup/" class="ud-main-btn ud-border-btn">
+                            联系咨询
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-10">
+                <div class="ud-single-pricing active wow fadeInUp" data-wow-delay=".1s">
+                    <span class="ud-popular-tag">推荐</span>
+                    <div class="ud-pricing-header">
+                        <h3>专业版</h3>
+                        <h4>按需报价</h4>
+                    </div>
+                    <div class="ud-pricing-body">
+                        <ul>
+                            <li>基础版全部功能</li>
+                            <li>规则引擎 + DAG 子流程</li>
+                            <li>CMDB + 拓扑可视化</li>
+                            <li>监控告警引擎</li>
+                            <li>≤ 50 AI 实例</li>
+                            <li>多团队 + 跨主机</li>
+                        </ul>
+                    </div>
+                    <div class="ud-pricing-footer">
+                        <a href="/signup/" class="ud-main-btn ud-white-btn">
+                            申请试用
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-10">
+                <div class="ud-single-pricing last-item wow fadeInUp" data-wow-delay=".15s">
+                    <div class="ud-pricing-header">
+                        <h3>企业版</h3>
+                        <h4>定制方案</h4>
+                    </div>
+                    <div class="ud-pricing-body">
+                        <ul>
+                            <li>专业版全部功能</li>
+                            <li>多租户 + SSO</li>
+                            <li>OpenAPI 集成</li>
+                            <li>专属部署支持</li>
+                            <li>无限 AI 实例</li>
+                            <li>优先技术支持</li>
+                        </ul>
+                    </div>
+                    <div class="ud-pricing-footer">
+                        <a href="/signup/" class="ud-main-btn ud-border-btn">
+                            联系咨询
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+<!-- ====== Pricing End ====== -->
+
+<!-- ====== FAQ Start ====== -->
+<section id="faq" class="ud-faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ud-section-title text-center mx-auto">
+                    <span>FAQ</span>
+                    <h2>常见问题</h2>
+                    <p>关于 Hive 你可能想知道的</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="ud-single-faq wow fadeInUp" data-wow-delay=".1s">
+                    <div class="accordion">
+                        <button class="ud-faq-btn collapsed" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            <span class="icon flex-shrink-0"><i class="lni lni-chevron-down"></i></span>
+                            <span>Hive 跟 Cursor / Copilot / Devin 有什么区别？</span>
+                        </button>
+                        <div id="faq1" class="accordion-collapse collapse">
+                            <div class="ud-faq-body">
+                                它们是 AI 编码工具——让 AI 写代码更快。Hive 是管理平台——管理使用这些工具的 AI 团队。它们是"工具"层，Hive 是"管理"层。两者互补，Hive 的 AI Worker 底层可以跑 Cursor CLI / Claude Code / kiro 等任何 Agent 工具。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ud-single-faq wow fadeInUp" data-wow-delay=".15s">
+                    <div class="accordion">
+                        <button class="ud-faq-btn collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            <span class="icon flex-shrink-0"><i class="lni lni-chevron-down"></i></span>
+                            <span>我的源代码安全吗？</span>
+                        </button>
+                        <div id="faq2" class="accordion-collapse collapse">
+                            <div class="ud-faq-body">
+                                完全安全。无论私有部署还是混合部署，所有源码和项目文件始终保存在您自有主机上的 AI Swarm 中。Hive 服务器只传递控制指令和状态元数据，不接触一行代码。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ud-single-faq wow fadeInUp" data-wow-delay=".2s">
+                    <div class="accordion">
+                        <button class="ud-faq-btn collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            <span class="icon flex-shrink-0"><i class="lni lni-chevron-down"></i></span>
+                            <span>需要改变现有团队结构吗？</span>
+                        </button>
+                        <div id="faq3" class="accordion-collapse collapse">
+                            <div class="ud-faq-body">
+                                不需要。Hive 支持渐进式切换——从"人工托管"（人做调度，AI 执行）到"Hive 托管"（Hive 做调度，人只审批）可以平滑过渡。保持现有人员，产出自然增长。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="ud-single-faq wow fadeInUp" data-wow-delay=".1s">
+                    <div class="accordion">
+                        <button class="ud-faq-btn collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            <span class="icon flex-shrink-0"><i class="lni lni-chevron-down"></i></span>
+                            <span>Hive 成熟度如何？是 PPT 产品吗？</span>
+                        </button>
+                        <div id="faq4" class="accordion-collapse collapse">
+                            <div class="ud-faq-body">
+                                不是。Hive 自身就是用 AI 团队通过 Hive 开发的（Dogfooding）。累计完成 420+ 工单闭环，产出 50+ 数据库表、100+ API 端点、20+ Web 页面。系统已 7×24 生产运行数月。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ud-single-faq wow fadeInUp" data-wow-delay=".15s">
+                    <div class="accordion">
+                        <button class="ud-faq-btn collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            <span class="icon flex-shrink-0"><i class="lni lni-chevron-down"></i></span>
+                            <span>支持哪些 AI 模型？</span>
+                        </button>
+                        <div id="faq5" class="accordion-collapse collapse">
+                            <div class="ud-faq-body">
+                                内置代理节点集群，国内企业可靠使用海外顶级模型（Claude Code、Codex GPT-5 等），同时支持国产模型（GLM-5.2 等）。自动故障切换，模型通道中断时秒级切换，不影响 AI 团队持续工作。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ud-single-faq wow fadeInUp" data-wow-delay=".2s">
+                    <div class="accordion">
+                        <button class="ud-faq-btn collapsed" data-bs-toggle="collapse" data-bs-target="#faq6">
+                            <span class="icon flex-shrink-0"><i class="lni lni-chevron-down"></i></span>
+                            <span>AI 出问题了怎么办？</span>
+                        </button>
+                        <div id="faq6" class="accordion-collapse collapse">
+                            <div class="ud-faq-body">
+                                Hive 内置健康检测引擎，自动识别 offline / stuck / broken 等状态，自动恢复（重建会话+上下文恢复）。3 次重试失败后自动升级告警。7×24 无人值守也能自愈。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ====== FAQ End ====== -->
+
+<!-- ====== Contact Start ====== -->
+<section id="contact" class="ud-contact">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="ud-contact-content-wrapper">
+                    <div class="ud-contact-title">
+                        <span>联系我们</span>
+                        <h2>让我们聊聊<br>如何提升您的研发产能</h2>
+                    </div>
+                    <div class="ud-contact-info-wrapper">
+                        <div class="ud-single-info">
+                            <div class="ud-info-icon">
+                                <i class="lni lni-map-marker"></i>
+                            </div>
+                            <div class="ud-info-meta">
+                                <h5>地址</h5>
+                                <p>上海市金沙江西路1555弄361号 4楼</p>
+                            </div>
+                        </div>
+                        <div class="ud-single-info">
+                            <div class="ud-info-icon">
+                                <i class="lni lni-envelope"></i>
+                            </div>
+                            <div class="ud-info-meta">
+                                <h5>邮箱</h5>
+                                <p>hi@hive-teams.com</p>
+                            </div>
+                        </div>
+                        <div class="ud-single-info">
+                            <div class="ud-info-icon">
+                                <i class="lni lni-phone"></i>
+                            </div>
+                            <div class="ud-info-meta">
+                                <h5>电话</h5>
+                                <p>186-6838-7288</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="ud-contact-form-wrapper wow fadeInUp" data-wow-delay=".2s">
+                    <h3 class="ud-contact-form-title">商务咨询</h3>
+                    <form class="ud-contact-form">
+                        <div class="ud-form-group">
+                            <label>姓名 *</label>
+                            <input type="text" placeholder="您的姓名"/>
+                        </div>
+                        <div class="ud-form-group">
+                            <label>邮箱 *</label>
+                            <input type="email" placeholder="您的邮箱"/>
+                        </div>
+                        <div class="ud-form-group">
+                            <label>公司</label>
+                            <input type="text" placeholder="公司名称"/>
+                        </div>
+                        <div class="ud-form-group">
+                            <label>留言</label>
+                            <textarea rows="4" placeholder="您想了解什么？"></textarea>
+                        </div>
+                        <div class="ud-form-group mb-0">
+                            <button type="submit" class="ud-main-btn">
+                                发送咨询
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ====== Contact End ====== -->
