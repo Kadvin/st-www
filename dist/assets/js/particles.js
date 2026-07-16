@@ -1,7 +1,7 @@
 /**
  * Hive Background Animations
- * 第一区（Hero）：星空粒子，只有点没有线
- * 其他区：几何多边形线条，有角度/结构变化，代表变化与演进
+ * Hero 区：星空粒子闪烁
+ * 其他区：大尺寸三角形/四边形，角对角固定长度连线，缓慢漂移+旋转
  */
 (function () {
   'use strict';
@@ -62,8 +62,8 @@
     requestAnimationFrame(function () { self.animate(); });
   };
 
-  // ========== 几何多边形（其他区域） ==========
-  function GeoShapes(container, config) {
+  // ========== 几何形状（其他区域） ==========
+  function GeoNetwork(container, config) {
     this.container = container;
     this.config = config;
     this.canvas = document.createElement('canvas');
@@ -71,6 +71,7 @@
     this.ctx = this.canvas.getContext('2d');
     this.container.insertBefore(this.canvas, this.container.firstChild);
     this.shapes = [];
+    this.links = [];
     this.resize();
     this.init();
     this.animate();
@@ -79,101 +80,162 @@
     window.addEventListener('resize', function () { self.resize(); });
   }
 
-  GeoShapes.prototype.resize = function () {
+  GeoNetwork.prototype.resize = function () {
     this.width = this.container.offsetWidth;
     this.height = this.container.offsetHeight;
     this.canvas.width = this.width;
     this.canvas.height = this.height;
   };
 
-  GeoShapes.prototype.init = function () {
+  GeoNetwork.prototype.init = function () {
     this.shapes = [];
-    for (var i = 0; i < this.config.count; i++) {
-      var sides = Math.floor(Math.random() * 4) + 3; // 3~6 边形
-      this.shapes.push({
-        x: Math.random() * this.width,
-        y: Math.random() * this.height,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.2,
-        size: Math.random() * 40 + 20,
-        sides: sides,
-        rotation: Math.random() * Math.PI * 2,
-        rotationSpeed: (Math.random() - 0.5) * 0.008,
-        alpha: Math.random() * 0.15 + 0.05,
-        // 形变：让多边形随时间微变
-        morphPhase: Math.random() * Math.PI * 2,
-        morphSpeed: Math.random() * 0.01 + 0.003
-      });
+    this.links = [];
+
+    var count = this.config.count;
+    var cellCols = Math.ceil(Math.sqrt(count * this.width / this.height));
+    var cellRows = Math.ceil(count / cellCols);
+    var cellW = this.width / cellCols;
+    var cellH = this.height / cellRows;
+
+    // 在网格中放置形状，确保不重叠
+    var idx = 0;
+    for (var row = 0; row < cellRows && idx < count; row++) {
+      for (var col = 0; col < cellCols && idx < count; col++) {
+        var cx = cellW * col + cellW * (0.2 + Math.random() * 0.6);
+        var cy = cellH * row + cellH * (0.2 + Math.random() * 0.6);
+        var sides = Math.random() < 0.5 ? 3 : 4; // 三角形或四边形
+        var size = 80 + Math.random() * 60; // 80~140px
+
+        this.shapes.push({
+          x: cx,
+          y: cy,
+          vx: (Math.random() - 0.5) * 0.15,
+          vy: (Math.random() - 0.5) * 0.12,
+          size: size,
+          sides: sides,
+          rotation: Math.random() * Math.PI * 2,
+          rotationSpeed: (Math.random() - 0.5) * 0.003,
+          alpha: this.config.shapeAlpha
+        });
+        idx++;
+      }
+    }
+
+    // 建立固定连线：每个形状与最近的 1~2 个形状连线（角对角）
+    for (var i = 0; i < this.shapes.length; i++) {
+      var nearest = this.findNearest(i, 2);
+      for (var n = 0; n < nearest.length; n++) {
+        var j = nearest[n];
+        // 避免重复连线
+        if (j > i) {
+          this.links.push({ a: i, b: j });
+        }
+      }
     }
   };
 
-  GeoShapes.prototype.drawPolygon = function (shape) {
+  GeoNetwork.prototype.findNearest = function (idx, count) {
+    var dists = [];
+    for (var i = 0; i < this.shapes.length; i++) {
+      if (i === idx) continue;
+      var dx = this.shapes[idx].x - this.shapes[i].x;
+      var dy = this.shapes[idx].y - this.shapes[i].y;
+      dists.push({ idx: i, dist: Math.sqrt(dx * dx + dy * dy) });
+    }
+    dists.sort(function (a, b) { return a.dist - b.dist; });
+    var result = [];
+    for (var i = 0; i < Math.min(count, dists.length); i++) {
+      result.push(dists[i].idx);
+    }
+    return result;
+  };
+
+  GeoNetwork.prototype.getVertices = function (shape) {
+    var verts = [];
+    for (var i = 0; i < shape.sides; i++) {
+      var angle = shape.rotation + (i / shape.sides) * Math.PI * 2;
+      verts.push({
+        x: shape.x + Math.cos(angle) * shape.size,
+        y: shape.y + Math.sin(angle) * shape.size
+      });
+    }
+    return verts;
+  };
+
+  GeoNetwork.prototype.drawShape = function (shape) {
     var ctx = this.ctx;
-    var morph = Math.sin(shape.morphPhase) * 0.2; // ±20% 形变
+    var verts = this.getVertices(shape);
 
     ctx.beginPath();
-    for (var i = 0; i <= shape.sides; i++) {
-      var angle = shape.rotation + (i / shape.sides) * Math.PI * 2;
-      // 交替顶点有不同半径，产生不规则多边形
-      var radiusFactor = (i % 2 === 0) ? 1 + morph : 1 - morph * 0.5;
-      var r = shape.size * radiusFactor;
-      var px = shape.x + Math.cos(angle) * r;
-      var py = shape.y + Math.sin(angle) * r;
-      if (i === 0) {
-        ctx.moveTo(px, py);
-      } else {
-        ctx.lineTo(px, py);
-      }
+    ctx.moveTo(verts[0].x, verts[0].y);
+    for (var i = 1; i < verts.length; i++) {
+      ctx.lineTo(verts[i].x, verts[i].y);
     }
     ctx.closePath();
     ctx.strokeStyle = this.config.strokeColor.replace('ALPHA', shape.alpha.toFixed(3));
-    ctx.lineWidth = 1;
+    ctx.lineWidth = 1.2;
     ctx.stroke();
   };
 
-  GeoShapes.prototype.animate = function () {
+  GeoNetwork.prototype.drawLink = function (link) {
+    var a = this.shapes[link.a];
+    var b = this.shapes[link.b];
+    var vertsA = this.getVertices(a);
+    var vertsB = this.getVertices(b);
+
+    // 找到两个形状之间最近的一对顶点（角对角连线）
+    var minDist = Infinity;
+    var pa, pb;
+    for (var i = 0; i < vertsA.length; i++) {
+      for (var j = 0; j < vertsB.length; j++) {
+        var dx = vertsA[i].x - vertsB[j].x;
+        var dy = vertsA[i].y - vertsB[j].y;
+        var d = dx * dx + dy * dy;
+        if (d < minDist) {
+          minDist = d;
+          pa = vertsA[i];
+          pb = vertsB[j];
+        }
+      }
+    }
+
+    if (pa && pb) {
+      this.ctx.beginPath();
+      this.ctx.moveTo(pa.x, pa.y);
+      this.ctx.lineTo(pb.x, pb.y);
+      this.ctx.strokeStyle = this.config.strokeColor.replace('ALPHA', (this.config.shapeAlpha * 0.6).toFixed(3));
+      this.ctx.lineWidth = 0.8;
+      this.ctx.stroke();
+    }
+  };
+
+  GeoNetwork.prototype.animate = function () {
     var self = this;
     this.ctx.clearRect(0, 0, this.width, this.height);
 
+    // 更新位置和旋转
     for (var i = 0; i < this.shapes.length; i++) {
       var s = this.shapes[i];
-
-      // 移动
       s.x += s.vx;
       s.y += s.vy;
-
-      // 边界反弹（留出余量）
-      if (s.x < -s.size) s.x = this.width + s.size;
-      if (s.x > this.width + s.size) s.x = -s.size;
-      if (s.y < -s.size) s.y = this.height + s.size;
-      if (s.y > this.height + s.size) s.y = -s.size;
-
-      // 旋转
       s.rotation += s.rotationSpeed;
 
-      // 形变
-      s.morphPhase += s.morphSpeed;
-
-      this.drawPolygon(s);
+      // 柔和边界反弹
+      var margin = s.size;
+      if (s.x < margin || s.x > this.width - margin) s.vx *= -1;
+      if (s.y < margin || s.y > this.height - margin) s.vy *= -1;
+      s.x = Math.max(margin, Math.min(this.width - margin, s.x));
+      s.y = Math.max(margin, Math.min(this.height - margin, s.y));
     }
 
-    // 绘制部分连线（相邻形状之间）
-    for (var i = 0; i < this.shapes.length - 1; i++) {
-      var a = this.shapes[i];
-      var b = this.shapes[i + 1];
-      var dx = a.x - b.x;
-      var dy = a.y - b.y;
-      var dist = Math.sqrt(dx * dx + dy * dy);
+    // 绘制连线（先画线，再画形状，形状在上层）
+    for (var i = 0; i < this.links.length; i++) {
+      this.drawLink(this.links[i]);
+    }
 
-      if (dist < this.config.linkDist) {
-        var opacity = (1 - dist / this.config.linkDist) * 0.08;
-        this.ctx.beginPath();
-        this.ctx.moveTo(a.x, a.y);
-        this.ctx.lineTo(b.x, b.y);
-        this.ctx.strokeStyle = this.config.strokeColor.replace('ALPHA', opacity.toFixed(3));
-        this.ctx.lineWidth = 0.6;
-        this.ctx.stroke();
-      }
+    // 绘制形状
+    for (var i = 0; i < this.shapes.length; i++) {
+      this.drawShape(this.shapes[i]);
     }
 
     requestAnimationFrame(function () { self.animate(); });
@@ -184,32 +246,32 @@
     {
       selector: '.ud-features',
       strokeColor: 'rgba(100,116,139,ALPHA)',
-      count: 12,
-      linkDist: 200
+      shapeAlpha: 0.15,
+      count: 8
     },
     {
       selector: '.ud-about',
       strokeColor: 'rgba(80,100,130,ALPHA)',
-      count: 10,
-      linkDist: 180
+      shapeAlpha: 0.12,
+      count: 6
     },
     {
       selector: '.ud-pricing',
       strokeColor: 'rgba(255,255,255,ALPHA)',
-      count: 12,
-      linkDist: 200
+      shapeAlpha: 0.12,
+      count: 7
     },
     {
       selector: '.ud-faq',
       strokeColor: 'rgba(90,110,140,ALPHA)',
-      count: 8,
-      linkDist: 160
+      shapeAlpha: 0.1,
+      count: 5
     },
     {
       selector: '.ud-contact',
       strokeColor: 'rgba(80,100,120,ALPHA)',
-      count: 8,
-      linkDist: 150
+      shapeAlpha: 0.1,
+      count: 5
     }
   ];
 
@@ -218,10 +280,10 @@
     var hero = document.querySelector('.ud-hero');
     if (hero) new StarField(hero);
 
-    // 其他区域几何多边形
+    // 其他区域几何形状
     for (var i = 0; i < geoConfigs.length; i++) {
       var el = document.querySelector(geoConfigs[i].selector);
-      if (el) new GeoShapes(el, geoConfigs[i]);
+      if (el) new GeoNetwork(el, geoConfigs[i]);
     }
   }
 
