@@ -291,33 +291,33 @@
   // ========== 配置与初始化 ==========
   var geoConfigs = [
     {
-      selector: '.ud-features',
+      selector: '#enterprise',
       strokeColor: 'rgba(100,116,139,ALPHA)',
-      shapeAlpha: 0.18,
+      shapeAlpha: 0.15,
       count: 4
     },
     {
-      selector: '.ud-about',
-      strokeColor: 'rgba(80,100,130,ALPHA)',
-      shapeAlpha: 0.14,
+      selector: '#team-value',
+      strokeColor: 'rgba(255,255,255,ALPHA)',
+      shapeAlpha: 0.1,
       count: 3
     },
     {
-      selector: '.ud-pricing',
+      selector: '#personal-value',
+      strokeColor: 'rgba(100,116,139,ALPHA)',
+      shapeAlpha: 0.12,
+      count: 3
+    },
+    {
+      selector: '#demo',
       strokeColor: 'rgba(255,255,255,ALPHA)',
-      shapeAlpha: 0.14,
-      count: 4
+      shapeAlpha: 0.1,
+      count: 3
     },
     {
       selector: '.ud-faq',
       strokeColor: 'rgba(90,110,140,ALPHA)',
-      shapeAlpha: 0.12,
-      count: 3
-    },
-    {
-      selector: '.ud-contact',
-      strokeColor: 'rgba(80,100,120,ALPHA)',
-      shapeAlpha: 0.12,
+      shapeAlpha: 0.1,
       count: 3
     }
   ];
