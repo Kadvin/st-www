@@ -127,14 +127,16 @@
     var idx = 0;
     for (var row = 0; row < cellRows && idx < count; row++) {
       for (var col = 0; col < cellCols && idx < count; col++) {
-        // 中心在格子内随机偏移（留边距防止重叠）
-        var cx = cellW * col + cellW * 0.5 + (Math.random() - 0.5) * cellW * 0.3;
-        var cy = cellH * row + cellH * 0.5 + (Math.random() - 0.5) * cellH * 0.3;
+        // 中心在格子内随机偏移（小偏移防止重叠）
+        var cx = cellW * col + cellW * 0.5 + (Math.random() - 0.5) * cellW * 0.15;
+        var cy = cellH * row + cellH * 0.5 + (Math.random() - 0.5) * cellH * 0.15;
 
         var sides = Math.random() < 0.5 ? 3 : 4;
-        // 基础尺寸不超过格子的 40%，确保不重叠
-        var maxSize = Math.min(cellW, cellH) * 0.35;
-        var baseSize = maxSize * (0.5 + Math.random() * 0.5);
+        // 基础尺寸：格子的 25%，确保充分间距不重叠
+        var maxSize = Math.min(cellW, cellH) * 0.25;
+        var baseSize = maxSize * (0.7 + Math.random() * 0.3);
+        // 最小 150px
+        if (baseSize < 150) baseSize = 150;
 
         var localVerts = this.generateRandomVerts(sides, baseSize);
 
@@ -292,31 +294,31 @@
       selector: '.ud-features',
       strokeColor: 'rgba(100,116,139,ALPHA)',
       shapeAlpha: 0.18,
-      count: 8
+      count: 4
     },
     {
       selector: '.ud-about',
       strokeColor: 'rgba(80,100,130,ALPHA)',
       shapeAlpha: 0.14,
-      count: 6
+      count: 3
     },
     {
       selector: '.ud-pricing',
       strokeColor: 'rgba(255,255,255,ALPHA)',
       shapeAlpha: 0.14,
-      count: 7
+      count: 4
     },
     {
       selector: '.ud-faq',
       strokeColor: 'rgba(90,110,140,ALPHA)',
       shapeAlpha: 0.12,
-      count: 5
+      count: 3
     },
     {
       selector: '.ud-contact',
       strokeColor: 'rgba(80,100,120,ALPHA)',
       shapeAlpha: 0.12,
-      count: 5
+      count: 3
     }
   ];
 
