@@ -49,13 +49,10 @@
                                 <a class="ud-menu-scroll" href="/#home">首页</a>
                             </li>
                             <li class="nav-item">
-                                <a class="ud-menu-scroll" href="/#features">产品能力</a>
+                                <a class="ud-menu-scroll" href="/#why-hive">为什么选 Hive</a>
                             </li>
                             <li class="nav-item">
-                                <a class="ud-menu-scroll" href="/#about">为什么选 Hive</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="ud-menu-scroll" href="/#pricing">商业模式</a>
+                                <a class="ud-menu-scroll" href="/#demo">产品演示</a>
                             </li>
                             <li class="nav-item">
                                 <a class="ud-menu-scroll" href="/#faq">常见问题</a>
@@ -68,7 +65,7 @@
 
                     <div class="navbar-btn d-none d-sm-inline-block">
                         <a href="/signup/" class="ud-main-btn ud-white-btn">
-                            申请试用
+                            开通试用
                         </a>
                     </div>
                 </nav>
@@ -101,11 +98,11 @@
                     <ul class="ud-hero-buttons">
                         <li>
                             <a href="/signup/" class="ud-main-btn ud-white-btn">
-                                申请试用
+                                开通试用
                             </a>
                         </li>
                         <li>
-                            <a href="#features" class="ud-main-btn ud-link-btn">
+                            <a href="#why-hive" class="ud-main-btn ud-link-btn">
                                 了解更多 <i class="lni lni-arrow-right"></i>
                             </a>
                         </li>
@@ -128,147 +125,285 @@
 </section>
 <!-- ====== Hero End ====== -->
 
-<!-- ====== Features Start ====== -->
-<section id="features" class="ud-features">
+<!-- ====== Why Hive Start ====== -->
+<section id="why-hive" class="ud-features">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="ud-section-title">
-                    <span>核心能力</span>
-                    <h2>Hive 为你的研发团队带来什么</h2>
-                    <p>
-                        不是替代研发人员，而是让每个人都能带领一个 AI 团队交付业务价值。
-                    </p>
+                    <span>为什么选 Hive</span>
+                    <h2>从企业、团队到个人，全方位提升研发效能</h2>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xl-3 col-lg-3 col-sm-6">
-                <div class="ud-single-feature wow fadeInUp" data-wow-delay=".1s">
-                    <div class="ud-feature-icon">
-                        <i class="lni lni-rocket"></i>
+
+        <!-- 三节 Tab 切换 -->
+        <div class="why-hive-tabs">
+            <ul class="why-hive-tab-nav">
+                <li class="active" data-tab="enterprise">🏢 企业视角</li>
+                <li data-tab="team">👥 团队视角</li>
+                <li data-tab="personal">🧑‍💻 个人视角</li>
+            </ul>
+
+            <!-- 企业视角 -->
+            <div class="why-hive-tab-content active" id="tab-enterprise">
+                <div class="why-hive-header">
+                    <h3>AI 时代，让研发产能翻 5~10 倍</h3>
+                </div>
+                <div class="why-hive-carousel" data-carousel="enterprise">
+                    <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="slide-image-placeholder">
+                                        <p>📊 多角色 AI 协作示意图</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="slide-content">
+                                        <div class="slide-number">01</div>
+                                        <h4>效率</h4>
+                                        <p>多个职责部署 AI 员工，让你的核心研发员工专注业务、交互、架构等关键决策。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="slide-image-placeholder">
+                                        <p>⚡ 多任务并发执行面板</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="slide-content">
+                                        <div class="slide-number">02</div>
+                                        <h4>并发</h4>
+                                        <p>在把人的效率提升后，人 + AI 的整体效率就提升，并发处理多任务。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="slide-image-placeholder">
+                                        <p>🛡️ 健康检测与自动恢复</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="slide-content">
+                                        <div class="slide-number">03</div>
+                                        <h4>可靠</h4>
+                                        <p>自动协调多个 AI 的工作，自动监控和恢复——从基础设施到模型服务，Agent 各种异常。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="slide-image-placeholder">
+                                        <p>🌙 夜间冲刺模式</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="slide-content">
+                                        <div class="slide-number">04</div>
+                                        <h4>努力</h4>
+                                        <p>通过 Hive 自带的 Coordinator / Loop 模式，每个 AI 团队都可以在夜间不停地冲刺。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="slide-image-placeholder">
+                                        <p>🧠 顶尖模型矩阵</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="slide-content">
+                                        <div class="slide-number">05</div>
+                                        <h4>聪明</h4>
+                                        <p>支持全球最顶尖模型，顶尖模型之间的协作，也支持国产最顶尖模型。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="slide-image-placeholder">
+                                        <p>🔒 代码安全架构图</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="slide-content">
+                                        <div class="slide-number">06</div>
+                                        <h4>安全</h4>
+                                        <p>无论私有化还是公域部署，代码都跑在您这一侧，不经由 Hive 平台。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="ud-feature-content">
-                        <h3 class="ud-feature-title">产能 ×5-10</h3>
-                        <p class="ud-feature-desc">
-                            1 人管理 20+ AI Agent，产出等效 5-8 人传统团队，7×24 不间断运转。
-                        </p>
+                    <div class="carousel-controls">
+                        <button class="carousel-prev"><i class="lni lni-chevron-left"></i></button>
+                        <div class="carousel-dots"></div>
+                        <button class="carousel-next"><i class="lni lni-chevron-right"></i></button>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-sm-6">
-                <div class="ud-single-feature wow fadeInUp" data-wow-delay=".15s">
-                    <div class="ud-feature-icon">
-                        <i class="lni lni-shield"></i>
+
+            <!-- 团队视角 -->
+            <div class="why-hive-tab-content" id="tab-team">
+                <div class="why-hive-header">
+                    <h3>Hive 的核心目标只有一个：提升研发团队的产能与质量</h3>
+                </div>
+                <div class="why-hive-carousel" data-carousel="team">
+                    <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="slide-image-placeholder">
+                                        <p>🔧 研发工作全景</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="slide-content">
+                                        <div class="slide-number">01</div>
+                                        <h4>研发不只是写代码</h4>
+                                        <p>还有排查故障、分析需求、原型开发、环境搭建、CI/CD、部署发布、巡检拨测等。这些都是 AI 可以承担的工作。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="slide-image-placeholder">
+                                        <p>🔄 上下文切换示意</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="slide-content">
+                                        <div class="slide-number">02</div>
+                                        <h4>效率的第一敌人是切栈</h4>
+                                        <p>无数深入思考的研发人员，无数次切栈处理各种琐碎问题。每次切栈，深度思考的状态就被打断。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="slide-image-placeholder">
+                                        <p>🐝 Hive 管研发全流程</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="slide-content">
+                                        <div class="slide-number">03</div>
+                                        <h4>AI 帮你写代码，Hive 帮你管研发</h4>
+                                        <p>Hive 不是又一个 AI 编码工具。它是管理使用这些工具的 AI 团队的系统——流程、质量、协调、恢复。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="ud-feature-content">
-                        <h3 class="ud-feature-title">质量有保障</h3>
-                        <p class="ud-feature-desc">
-                            流程引擎强制 Gate 审批，AI 每行产出可查看 diff，跳不过、糊弄不了。
-                        </p>
+                    <div class="carousel-controls">
+                        <button class="carousel-prev"><i class="lni lni-chevron-left"></i></button>
+                        <div class="carousel-dots"></div>
+                        <button class="carousel-next"><i class="lni lni-chevron-right"></i></button>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-sm-6">
-                <div class="ud-single-feature wow fadeInUp" data-wow-delay=".2s">
-                    <div class="ud-feature-icon">
-                        <i class="lni lni-eye"></i>
-                    </div>
-                    <div class="ud-feature-content">
-                        <h3 class="ud-feature-title">全局可见</h3>
-                        <p class="ud-feature-desc">
-                            全景图一屏掌控全局——工单位置、AI 状态、异常告警，一目了然。
-                        </p>
-                    </div>
+
+            <!-- 个人视角 -->
+            <div class="why-hive-tab-content" id="tab-personal">
+                <div class="why-hive-header">
+                    <h3>AI 时代，使用了 AI 编程的研发人员普遍遇到</h3>
                 </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-sm-6">
-                <div class="ud-single-feature wow fadeInUp" data-wow-delay=".25s">
-                    <div class="ud-feature-icon">
-                        <i class="lni lni-pulse"></i>
+                <div class="why-hive-carousel" data-carousel="personal">
+                    <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="slide-image-placeholder">
+                                        <p>😰 失控感</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="slide-content">
+                                        <div class="slide-number">01</div>
+                                        <h4>失控</h4>
+                                        <p>AI 写的越多，自己对产品的了解越少，跟不上 AI 的节奏。代码库在膨胀，但你对它的掌控感在下降。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="slide-image-placeholder">
+                                        <p>😫 焦虑感</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="slide-content">
+                                        <div class="slide-number">02</div>
+                                        <h4>焦虑</h4>
+                                        <p>AI 能干这么多，输出太快了，我最多只能盯 1-2 个 AI。产出在堆积，但你的注意力是有限的。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="slide-image-placeholder">
+                                        <p>🏗️ 兜底困境</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="slide-content">
+                                        <div class="slide-number">03</div>
+                                        <h4>兜底</h4>
+                                        <p>AI 堆出了新的屎山代码，最后还是要人类接手。没有流程和质量门禁，AI 的快反而是技术债的加速器。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="ud-feature-content">
-                        <h3 class="ud-feature-title">自动恢复</h3>
-                        <p class="ud-feature-desc">
-                            AI 卡住/崩溃/限流？系统自动检测→恢复→升级，7×24 自愈。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row" style="margin-top: 20px;">
-            <div class="col-xl-3 col-lg-3 col-sm-6">
-                <div class="ud-single-feature wow fadeInUp" data-wow-delay=".1s">
-                    <div class="ud-feature-icon">
-                        <i class="lni lni-lock"></i>
-                    </div>
-                    <div class="ud-feature-content">
-                        <h3 class="ud-feature-title">数据安全</h3>
-                        <p class="ud-feature-desc">
-                            源码始终在客户自有主机，Hive 只传控制指令，知识产权完全可控。
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-sm-6">
-                <div class="ud-single-feature wow fadeInUp" data-wow-delay=".15s">
-                    <div class="ud-feature-icon">
-                        <i class="lni lni-world"></i>
-                    </div>
-                    <div class="ud-feature-content">
-                        <h3 class="ud-feature-title">顶级模型</h3>
-                        <p class="ud-feature-desc">
-                            内置代理集群，国内可靠使用 Claude Code、GPT-5、GLM-5.2 等。
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-sm-6">
-                <div class="ud-single-feature wow fadeInUp" data-wow-delay=".2s">
-                    <div class="ud-feature-icon">
-                        <i class="lni lni-cog"></i>
-                    </div>
-                    <div class="ud-feature-content">
-                        <h3 class="ud-feature-title">规则引擎</h3>
-                        <p class="ud-feature-desc">
-                            流程不是硬编码，规则可配置、可演进、支持 DAG 子流程编排。
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-sm-6">
-                <div class="ud-single-feature wow fadeInUp" data-wow-delay=".25s">
-                    <div class="ud-feature-icon">
-                        <i class="lni lni-users"></i>
-                    </div>
-                    <div class="ud-feature-content">
-                        <h3 class="ud-feature-title">角色升级</h3>
-                        <p class="ud-feature-desc">
-                            研发人员从"写代码"升级为"管团队"，发挥经验和判断力的最大价值。
-                        </p>
+                    <div class="carousel-controls">
+                        <button class="carousel-prev"><i class="lni lni-chevron-left"></i></button>
+                        <div class="carousel-dots"></div>
+                        <button class="carousel-next"><i class="lni lni-chevron-right"></i></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- ====== Features End ====== -->
+<!-- ====== Why Hive End ====== -->
 
-<!-- ====== About Start ====== -->
-<section id="about" class="ud-about">
+<!-- ====== Demo Start ====== -->
+<section id="demo" class="ud-about">
     <div class="container">
         <div class="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
             <div class="ud-about-content-wrapper">
                 <div class="ud-about-content">
-                    <span class="tag">为什么选 Hive</span>
-                    <h2>AI 编码工具解决"写代码"，<br>Hive 解决"管研发"</h2>
+                    <span class="tag">产品演示</span>
+                    <h2>即将上线</h2>
                     <p>
-                        Copilot / Cursor / Devin 让 AI 写代码更快。但当你用多个 AI Agent 组成团队完成完整研发流程时——谁来协调协作？谁来保证质量？谁来发现和恢复故障？
+                        产品演示视频和交互 Demo 正在制作中，敬请期待。
                     </p>
                     <p>
-                        <strong>Hive 是管理这些 AI 工具的平台。</strong>它让 20 个 AI Agent 有序运转：有需求分析、有设计评审、有开发协作、有测试验收、有部署流程、有故障恢复。
+                        如需提前了解产品能力，欢迎申请一对一演示。
                     </p>
-                    <a href="/signup/" class="ud-main-btn">申请试用</a>
+                    <a href="/signup/" class="ud-main-btn">预约演示</a>
                 </div>
             </div>
             <div class="ud-about-image">
@@ -294,98 +429,7 @@
         </div>
     </div>
 </section>
-<!-- ====== About End ====== -->
-
-<!-- ====== Pricing Start ====== -->
-<section id="pricing" class="ud-pricing">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="ud-section-title mx-auto text-center">
-                    <span>商业模式</span>
-                    <h2>灵活的部署方式</h2>
-                    <p>
-                        无论企业规模大小，Hive 都能适配你的场景。核心按 AI 实例数计费。
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row g-0 align-items-center justify-content-center">
-            <div class="col-lg-4 col-md-6 col-sm-10">
-                <div class="ud-single-pricing first-item wow fadeInUp" data-wow-delay=".15s">
-                    <div class="ud-pricing-header">
-                        <h3>基础版</h3>
-                        <h4>按需报价</h4>
-                    </div>
-                    <div class="ud-pricing-body">
-                        <ul>
-                            <li>全景视图</li>
-                            <li>工单管理 + 流转</li>
-                            <li>Gate 审批</li>
-                            <li>AI 健康检测</li>
-                            <li>≤ 10 AI 实例</li>
-                            <li>单团队</li>
-                        </ul>
-                    </div>
-                    <div class="ud-pricing-footer">
-                        <a href="/signup/" class="ud-main-btn ud-border-btn">
-                            联系咨询
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-10">
-                <div class="ud-single-pricing active wow fadeInUp" data-wow-delay=".1s">
-                    <span class="ud-popular-tag">推荐</span>
-                    <div class="ud-pricing-header">
-                        <h3>专业版</h3>
-                        <h4>按需报价</h4>
-                    </div>
-                    <div class="ud-pricing-body">
-                        <ul>
-                            <li>基础版全部功能</li>
-                            <li>规则引擎 + DAG 子流程</li>
-                            <li>CMDB + 拓扑可视化</li>
-                            <li>监控告警引擎</li>
-                            <li>≤ 50 AI 实例</li>
-                            <li>多团队 + 跨主机</li>
-                        </ul>
-                    </div>
-                    <div class="ud-pricing-footer">
-                        <a href="/signup/" class="ud-main-btn ud-white-btn">
-                            申请试用
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-10">
-                <div class="ud-single-pricing last-item wow fadeInUp" data-wow-delay=".15s">
-                    <div class="ud-pricing-header">
-                        <h3>企业版</h3>
-                        <h4>定制方案</h4>
-                    </div>
-                    <div class="ud-pricing-body">
-                        <ul>
-                            <li>专业版全部功能</li>
-                            <li>多租户 + SSO</li>
-                            <li>OpenAPI 集成</li>
-                            <li>专属部署支持</li>
-                            <li>无限 AI 实例</li>
-                            <li>优先技术支持</li>
-                        </ul>
-                    </div>
-                    <div class="ud-pricing-footer">
-                        <a href="/signup/" class="ud-main-btn ud-border-btn">
-                            联系咨询
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ====== Pricing End ====== -->
+<!-- ====== Demo End ====== -->
 
 <!-- ====== FAQ Start ====== -->
 <section id="faq" class="ud-faq">
@@ -587,9 +631,9 @@
                     <div class="ud-widget">
                         <h5 class="ud-widget-title">产品</h5>
                         <ul class="ud-widget-links">
-                            <li><a href="/#features">核心能力</a></li>
-                            <li><a href="/#about">为什么选 Hive</a></li>
-                            <li><a href="/#pricing">商业模式</a></li>
+                            <li><a href="/#why-hive">为什么选 Hive</a></li>
+                            <li><a href="/#demo">产品演示</a></li>
+                            <li><a href="/signup/">开通试用</a></li>
                         </ul>
                     </div>
                 </div>
@@ -599,7 +643,6 @@
                         <ul class="ud-widget-links">
                             <li><a href="/#faq">常见问题</a></li>
                             <li><a href="/#contact">联系我们</a></li>
-                            <li><a href="/signup/">申请试用</a></li>
                         </ul>
                     </div>
                 </div>
@@ -636,6 +679,7 @@
 <script src="/assets/js/wow.min.js"></script>
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/particles.js"></script>
+<script src="/assets/js/why-hive.js"></script>
 
 </body>
 </html>
