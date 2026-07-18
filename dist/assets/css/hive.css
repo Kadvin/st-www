@@ -233,6 +233,11 @@
     background: #1a237e;
 }
 
+.hive-section-dark > .container {
+    position: relative;
+    z-index: 1;
+}
+
 .hive-section-dark .ud-section-title span {
     color: #f59e0b;
 }

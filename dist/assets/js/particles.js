@@ -289,29 +289,23 @@
   };
 
   // ========== 配置与初始化 ==========
-  var geoConfigs = [
+  var lightGeoConfigs = [
     {
-      selector: '#enterprise',
-      strokeColor: 'rgba(100,116,139,ALPHA)',
-      shapeAlpha: 0.15,
-      count: 4
-    },
-    {
-      selector: '#team-value',
-      strokeColor: 'rgba(255,255,255,ALPHA)',
-      shapeAlpha: 0.1,
-      count: 3
-    },
-    {
-      selector: '#personal-value',
+      selector: '#why-efficiency',
       strokeColor: 'rgba(100,116,139,ALPHA)',
       shapeAlpha: 0.12,
       count: 3
     },
     {
-      selector: '#demo',
-      strokeColor: 'rgba(255,255,255,ALPHA)',
-      shapeAlpha: 0.1,
+      selector: '#why-quality',
+      strokeColor: 'rgba(100,116,139,ALPHA)',
+      shapeAlpha: 0.12,
+      count: 3
+    },
+    {
+      selector: '#why-safe',
+      strokeColor: 'rgba(100,116,139,ALPHA)',
+      shapeAlpha: 0.12,
       count: 3
     },
     {
@@ -323,12 +317,20 @@
   ];
 
   function initAll() {
+    // Hero 星空
     var hero = document.querySelector('.ud-hero');
     if (hero) new StarField(hero);
 
-    for (var i = 0; i < geoConfigs.length; i++) {
-      var el = document.querySelector(geoConfigs[i].selector);
-      if (el) new GeoNetwork(el, geoConfigs[i]);
+    // 所有深蓝 section 也加星空
+    var darkSections = document.querySelectorAll('.hive-section-dark');
+    for (var d = 0; d < darkSections.length; d++) {
+      new StarField(darkSections[d]);
+    }
+
+    // 浅色区域几何形状
+    for (var i = 0; i < lightGeoConfigs.length; i++) {
+      var el = document.querySelector(lightGeoConfigs[i].selector);
+      if (el) new GeoNetwork(el, lightGeoConfigs[i]);
     }
   }
 
