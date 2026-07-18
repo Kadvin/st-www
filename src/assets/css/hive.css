@@ -19,7 +19,8 @@
 .ud-about,
 .ud-pricing,
 .ud-faq,
-.ud-contact {
+.ud-contact,
+.hive-value-section {
     position: relative;
     overflow: hidden;
 }
@@ -29,7 +30,8 @@
 .ud-about > .container,
 .ud-pricing > .container,
 .ud-faq > .container,
-.ud-contact > .container {
+.ud-contact > .container,
+.hive-value-section > .container {
     position: relative;
     z-index: 1;
 }
@@ -231,11 +233,6 @@
 
 .hive-section-dark {
     background: #1a237e;
-}
-
-.hive-section-dark > .container {
-    position: relative;
-    z-index: 1;
 }
 
 .hive-section-dark .ud-section-title span {
